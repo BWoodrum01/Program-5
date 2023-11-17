@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Project 5</title>
+
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
+      <!-- bootstrap, need to use https for these links -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+      <style> .btn{margin: 5px} </style>
+  </head>
+  <body>
+
+      <div class="container">
+         <h2>Select a Course</h2>
+
+         <div style='padding: 5px;'>
+            <button type='cit' class="btn btn-primary" onClick="getData('cit')">Cit</button>
+            <button type='bus' class="btn btn-primary" onClick="getData('bus')">Business</button>
+
+         </div>
+
+
+
+         <div id="menuTable"></div>
+
+
+
+
+     </div>   <!-- end class='container'   -->
+
+  <!-- Handlebars template -->
+<script type="text/x-handlebars-template" id="menuTemplate">
+
+   <table class="table table-striped">
+      <tr><th>Name</th><th>Major</th><th>Midterm</th><th>Final</th></tr>
+      {{#each rows}}
+         <tr>
+            <td>{{name}}</td><td>{{major}}</td><td>{{midterm}}</td><td>{{final}}</td>
+         </tr>
+      {{/each}}
+   </table>
+</script>
+
+<script src = 'app.js'></script>   <!-- application ajax code -->
+
+</body></html>
