@@ -5,7 +5,7 @@ async function getData(selected_meal) {
         var data = await response.json();
 
         // filter data array for the selected meal
-        meal_items = data.filter( (item) => item.meal == selected_meal );
+        meal_items = data.filter( (item) => item.major == selected_meal );
 
        var templateText = document.getElementById('menuTemplate').innerHTML;
        var compiledTemplateText = Handlebars.compile(templateText);   // get and compile template code
