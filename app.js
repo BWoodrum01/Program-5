@@ -1,5 +1,5 @@
 async function getData(selected_meal) {
-    var response = await fetch('menu_items.json');   // this is a GET request
+    var response = await fetch('cit5students.json');   // this is a GET request
 
     if(response.ok) {
         var data = await response.json();
@@ -13,7 +13,7 @@ async function getData(selected_meal) {
        document.getElementById('menuTable').innerHTML = compiledHtml;
     }
     else {
-       document.querySelector('#menuTable').innerHTML = "There was an error, or menu items not found";
+       document.querySelector('#menuTable').innerHTML = "Oops!";
     }
 
 }
